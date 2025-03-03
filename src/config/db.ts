@@ -2,10 +2,9 @@ import mongoose from "mongoose";
 
 export const connectDB = async () => {
     try {
-        const url = 'mongodb+srv://root:<db_password>@cluster0.azmzy.mongodb.net/ImageManager';
-        const connection = await mongoose.connect(url);
-        const url2 = `${connection.connection.host}:${connection.connection.port}`;
-        console.log(`Connected to MongoDB at ${url2}`);
+        const connection = await mongoose.connect(process.env.MONGO_URI);
+        const url = `${connection.connection.host}:${connection.connection.port}`;
+        console.log(`Connected to MongoDB at ${url}`);
     } catch (error) {
         console.log(error.message);
         process.exit(1);

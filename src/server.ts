@@ -1,4 +1,5 @@
 import express from 'express'; // ESM Esmascript Module import
+import 'dotenv/config'; // Import the dotenv package to read the .env file
 import router from './router';
 import { connectDB } from './config/db';
 
