@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        // La carpeta donde se van a guardar los archivos compilados
+        "outDir": "./dist",
+
+        // La carpeta raiz de los archivos de codigo fuente
+        "rootDir": "./src",
+
+        // Que librerias de javascript se van a utilizar, en este caso se utilizaran las mas actuales
+        // que incluyen soporte para async/await, promesas, destructuracion de objetos, etc.
+        "lib": ["ESNext"],
+
+        // Que version de javascript se va a utilizar, en este caso la mas actual que incluye
+        // soporte para las ultimas caracteristicas de javascript como async/await, promesas, etc.
+        "target": "ESNext",
+
+        // Como se van a manejar los modulos. En este caso, se utiliza NodeNext para permitir a TypeScript
+        // utilizar las nuevas caracteristicas de importacion de modulos de Node.js, como la importacion de
+        // modulos de CommonJS con la sintaxis de importacion de ES Modules.
+        "moduleResolution": "NodeNext",
+
+        // Que tipo de modulo se va a utilizar. En este caso, se utiliza NodeNext para permitir a TypeScript
+        // utilizar las nuevas caracteristicas de importacion de modulos de Node.js, como la importacion de
+        // modulos de CommonJS con la sintaxis de importacion de ES Modules.
+        "module": "NodeNext",
+
+        // Activar o desactivar la estricta tipologia (si es true, dara errores si no se define tipos para las variables)
+        "strict": false,
+
+        // Generar o no archivos de mapas de codigo (ayudan a depurar)
+        "sourceMap": true,
+
+        // Compatibilidad con CommonJS
+        "esModuleInterop": true,
+
+        // Generar o no archivos de definicion de tipos
+        "declaration": true
+    },
+    // Archivos que se van a incluir en la compilacion
+    "include": ["src/**/*.ts"]
+}
